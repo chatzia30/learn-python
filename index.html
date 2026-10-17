@@ -1125,8 +1125,9 @@ def _why(r):
 const APP_VERSION = '1.0.0';
 const PYODIDE_VERSION = '314.0.7';
 // Where to find Pyodide, tried in order. Absolute URLs: a Blob worker has no page base URL.
-// 1. a test override, 2. a copy published next to this page (./pyodide/), 3. the jsDelivr CDN.
-const PYODIDE_BASES = [window.BP_PYODIDE_BASE, './pyodide/', `https://cdn.jsdelivr.net/pyodide/v${PYODIDE_VERSION}/full/`]
+// 1. a test override, 2. a copy published next to this page (./pyodide/, or loose beside index.html),
+// 3. the jsDelivr CDN.
+const PYODIDE_BASES = [window.BP_PYODIDE_BASE, './pyodide/', './', `https://cdn.jsdelivr.net/pyodide/v${PYODIDE_VERSION}/full/`]
   .filter(Boolean).map((b) => new URL(b, location.href).href);
 const IN_FRAME = (() => { try { return window.self !== window.top; } catch (e) { return true; } })();
 const STORE_KEY = 'blankpage.progress.v1';
