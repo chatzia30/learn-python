@@ -1,0 +1,38 @@
+{
+ "stdlib": "python_stdlib.zip.wasm",
+ "packages": {
+  "numpy": {
+   "file": "numpy-2.4.6-cp314-cp314-pyemscripten_2026_0_wasm32.whl.wasm",
+   "deps": []
+  },
+  "pandas": {
+   "file": "pandas-3.0.2-cp314-cp314-pyemscripten_2026_0_wasm32.whl.wasm",
+   "deps": [
+    "numpy",
+    "python-dateutil",
+    "pytz"
+   ]
+  },
+  "python-dateutil": {
+   "file": "python_dateutil-2.9.0.post0-py2.py3-none-any.whl.wasm",
+   "deps": [
+    "six"
+   ]
+  },
+  "pytz": {
+   "file": "pytz-2026.1.post1-py2.py3-none-any.whl.wasm",
+   "deps": []
+  },
+  "six": {
+   "file": "six-1.17.0-py2.py3-none-any.whl.wasm",
+   "deps": []
+  }
+ },
+ "imports": {
+  "numpy": "numpy",
+  "pandas": "pandas",
+  "dateutil": "python-dateutil",
+  "pytz": "pytz",
+  "six": "six"
+ }
+}
